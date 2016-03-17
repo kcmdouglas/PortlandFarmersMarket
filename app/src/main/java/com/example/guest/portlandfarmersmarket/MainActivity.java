@@ -1,6 +1,7 @@
 package com.example.guest.portlandfarmersmarket;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -23,6 +24,7 @@ import butterknife.ButterKnife;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     @Bind(R.id.background_field) ImageView mBackgroundImage;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,7 +98,8 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_market_map) {
-            // Handle the camera action
+            Intent intent = new Intent(MainActivity.this, MarketMapActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {
