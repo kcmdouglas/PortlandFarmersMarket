@@ -1,11 +1,11 @@
 package com.example.guest.portlandfarmersmarket;
 
+import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
@@ -14,7 +14,10 @@ import com.squareup.picasso.Picasso;
 import it.sephiroth.android.library.imagezoom.ImageViewTouch;
 import it.sephiroth.android.library.imagezoom.ImageViewTouchBase;
 
-public class MarketMapActivity extends MainActivity
+/**
+ * Created by Guest on 3/17/16.
+ */
+public class PcsActivity extends MainActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     private ImageViewTouch mMarketMap;
 
@@ -33,7 +36,7 @@ public class MarketMapActivity extends MainActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, R.string.PSU_hours, Snackbar.LENGTH_LONG)
+                Snackbar.make(view, R.string.PCS_hours, Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
@@ -47,8 +50,8 @@ public class MarketMapActivity extends MainActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        Picasso.with(MarketMapActivity.this)
-                .load(R.drawable.market_map)
+        Picasso.with(PcsActivity.this)
+                .load(R.drawable.pcs_map)
                 .into(mMarketMap);
     }
 }
