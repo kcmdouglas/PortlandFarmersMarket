@@ -14,10 +14,12 @@ import com.squareup.picasso.Picasso;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import it.sephiroth.android.library.imagezoom.ImageViewTouch;
+import it.sephiroth.android.library.imagezoom.ImageViewTouchBase;
 
 public class MarketMapActivity extends MainActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    private ImageView mMarketMap;
+    private ImageViewTouch mMarketMap;
 
 
     @Override
@@ -27,7 +29,8 @@ public class MarketMapActivity extends MainActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        mMarketMap = (ImageView) findViewById(R.id.market_map_background);
+        mMarketMap = (ImageViewTouch) findViewById(R.id.market_map_background);
+        mMarketMap.setDisplayType(ImageViewTouchBase.DisplayType.NONE);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -49,8 +52,8 @@ public class MarketMapActivity extends MainActivity
 
         Picasso.with(MarketMapActivity.this)
                 .load(R.drawable.market_map)
-                .fit()
-                .centerInside()
+//                .fit()
+////                .centerInside()
                 .into(mMarketMap);
     }
 }
