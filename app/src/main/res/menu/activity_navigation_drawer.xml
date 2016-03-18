@@ -9,16 +9,16 @@
         <item
             android:id="@+id/nav_market_map"
             android:icon="@drawable/ic_explore_black_24dp"
-            android:title="PSU Market Map" />
+            android:title="Portland State Market Map" />
 
         <item
             android:id="@+id/nav_pcs_map"
             android:icon="@drawable/ic_explore_black_24dp"
             android:title="Pioneer Square Market Map" />
         <item
-            android:id="@+id/nav_manage"
+            android:id="@+id/nav_locations"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:title="Market Locations" />
     </group>
 
     <!--<item android:title="Communicate">-->

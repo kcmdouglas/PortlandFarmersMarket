@@ -2,8 +2,6 @@ package com.example.guest.portlandfarmersmarket;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -104,8 +102,9 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_pcs_map) {
             Intent intent = new Intent(MainActivity.this, PcsActivity.class);
             startActivity(intent);
-        } else if (id == R.id.nav_manage) {
-
+        } else if (id == R.id.nav_locations) {
+            Intent intent = new Intent(MainActivity.this, LocationsActivity.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
